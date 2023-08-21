@@ -9,10 +9,10 @@ public class ValidPalindrome {
         int i = 0;
         int j = s.length() - 1;
         while (i < j) {
-            while (!isLetterOrDigit(s.charAt(i))) {
+            while (!isLetterOrDigit(s.charAt(i)) && i < j) {
                 i++;
             }
-            while (!isLetterOrDigit(s.charAt(j))) {
+            while (!isLetterOrDigit(s.charAt(j)) && i < j) {
                 j--;
             }
             if (toLowerCase(s.charAt(i)) != toLowerCase(s.charAt(j))) {
